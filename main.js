@@ -61,3 +61,29 @@ writeToDom(domString, 'challenge-2');
 
 challenge2(10);
 writeToDom(domString, 'challenge-2');
+
+// Challenge 3
+
+var array = [ 1, 2, 3];
+function challenge3(arr) {
+  function getUnique(value, index, self) {
+    return self.indexOf(value) === index;
+  };
+  var unique = arr.filter(getUnique);
+  var uniqueSum;
+  for (var i=0, uniqueSum=0; i<unique.length; uniqueSum += unique[i++]) {
+  };
+  domString = uniqueSum;
+  return domString;
+};
+
+challenge3(array);
+writeToDom(domString, 'challenge-3');
+
+var array = [ 1, 3, 8, 1, 8];
+challenge3(array);
+writeToDom(domString, 'challenge-3');
+
+var array = [ -1, -1, 5, 2, -7];
+challenge3(array);
+writeToDom(domString, 'challenge-3');
