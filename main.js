@@ -28,3 +28,36 @@ writeToDom(domString, 'challenge-1');
 
 challenge1(2000, 2000);
 writeToDom(domString, 'challenge-1');
+
+
+// Challenge 2
+var domString;
+function challenge2(num) {
+  var testResults = [];
+  for(var i = 2; i < num; i++) {
+    if(num % i === 0) {
+      testResults.push(false);
+      break;
+    } else {
+      testResults.push(true);
+      break;
+    };
+  };
+  if (num % 2 === 0) {
+    testResults.push(true);
+  } else {
+    testResults.push(false);
+  };
+  if (num % 10 === 0) {
+    testResults.push(true);
+  } else {
+    testResults.push(false);
+  };
+  domString = testResults;
+};
+
+challenge2(7);
+writeToDom(domString, 'challenge-2');
+
+challenge2(10);
+writeToDom(domString, 'challenge-2');
