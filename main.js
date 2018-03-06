@@ -87,3 +87,22 @@ writeToDom(domString, 'challenge-3');
 var array = [ -1, -1, 5, 2, -7];
 challenge3(array);
 writeToDom(domString, 'challenge-3');
+
+// Challenge 4
+
+var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+var birds1 = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"];
+
+function challenge4(arr) {
+  for (var j=0; j<geese.length; j++) {
+    for (var i=0; i<arr.length; i++) {
+      if (arr[i].includes(geese[j])) {
+        arr.splice(i, 1);
+      };
+    };
+  };
+  domString = arr;
+  return arr;
+};
+challenge4(birds1);
+writeToDom(domString, 'challenge-4');
